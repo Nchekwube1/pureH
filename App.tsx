@@ -8,10 +8,13 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-
+import RNBootSplash from 'react-native-bootsplash';
 const App = () => {
+  useEffect(() => {
+    RNBootSplash.hide({fade: true});
+  }, []);
   return (
     <SafeAreaView>
       <StatusBar backgroundColor={'red'} barStyle={'dark-content'} />
