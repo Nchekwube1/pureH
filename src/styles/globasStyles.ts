@@ -1,6 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import colors from '../constants/Colors';
 
+export const {height, width} = Dimensions.get('window');
 const globalStyles = StyleSheet.create({
   px1: {
     paddingHorizontal: 10,
@@ -31,6 +32,12 @@ const globalStyles = StyleSheet.create({
   },
   px10: {
     paddingHorizontal: 100,
+  },
+  py1: {
+    paddingVertical: 10,
+  },
+  py2: {
+    paddingVertical: 20,
   },
   fontNunitoRegular: {
     fontFamily: 'Nunito-Regular',
