@@ -14,7 +14,7 @@ import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
 import MainNavigation from './src/navigation/MainNavigation';
 import {getStatusBarHeight} from 'react-native-iphone-x-helper';
-import colors from './src/constants/Colors';
+import colors from './src/constants/pallete';
 const STATUSBAR_HEIGHT = getStatusBarHeight();
 const App = () => {
   useEffect(() => {

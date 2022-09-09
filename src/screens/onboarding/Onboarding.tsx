@@ -5,7 +5,7 @@ import TextComponent from '../../components/text/TextComponent';
 import onboarding1 from '../../assets/svgs/onboarding1';
 import onboarding2 from '../../assets/svgs/onboarding2';
 import onboarding3 from '../../assets/svgs/onboarding3';
-import colors from '../../constants/Colors';
+import colors from '../../constants/pallete';
 import Svg from '../../components/Svg';
 const Onboarding = () => {
   interface dataProps {
