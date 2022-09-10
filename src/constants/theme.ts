@@ -19,7 +19,34 @@ const theme = createTheme({
   },
   breakpoints: {
     phone: 0,
+    longPhone: {
+      width: 0,
+      height: 812,
+    },
     tablet: 768,
+    largeTablet: 1024,
+  },
+  textVariants: {
+    header: {
+      fontFamily: 'Montserrat-Bold',
+      fontWeight: 'bold',
+      fontSize: 34,
+      lineHeight: 42.5,
+      color: pallete.black,
+    },
+    subheader: {
+      fontFamily: 'Montserrat-SemiBold',
+      fontWeight: '600',
+      fontSize: 28,
+      lineHeight: 36,
+      color: pallete.black,
+    },
+    body: {
+      fontFamily: 'Montserrat-Regular',
+      fontSize: 16,
+      lineHeight: 24,
+      color: pallete.black,
+    },
   },
 });
 

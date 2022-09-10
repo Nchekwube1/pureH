@@ -19,7 +19,7 @@ public class MainActivity extends ReactActivity {
 @Override
 protected void onCreate(Bundle savedInstanceState) {
   RNBootSplash.init(this);
-  super.onCreate(null);
+  super.onCreate(savedInstanceState);
 }
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and

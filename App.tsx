@@ -15,13 +15,15 @@ import RNBootSplash from 'react-native-bootsplash';
 import MainNavigation from './src/navigation/MainNavigation';
 import {getStatusBarHeight} from 'react-native-iphone-x-helper';
 import colors from './src/constants/pallete';
+import {ThemeProvider} from '@shopify/restyle';
+import theme from './src/constants/theme';
 const STATUSBAR_HEIGHT = getStatusBarHeight();
 const App = () => {
   useEffect(() => {
     RNBootSplash.hide({fade: true});
   }, []);
   return (
-    <View style={{...StyleSheet.absoluteFillObject}}>
+    <ThemeProvider theme={theme}>
       <SafeAreaView
         style={{
           height: STATUSBAR_HEIGHT,
@@ -32,10 +34,12 @@ const App = () => {
           barStyle={'light-content'}
         />
       </SafeAreaView>
-      <NavigationContainer>
-        <MainNavigation />
-      </NavigationContainer>
-    </View>
+      <SafeAreaView style={{...StyleSheet.absoluteFillObject}}>
+        <NavigationContainer>
+          <MainNavigation />
+        </NavigationContainer>
+      </SafeAreaView>
+    </ThemeProvider>
   );
 };
 

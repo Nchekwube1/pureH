@@ -16,17 +16,17 @@ const Onboarding = () => {
   const data: dataProps[] = [
     {
       svgPath: onboarding1,
-      desc: 'Get the proper treatment you need anytime',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar consectetur amet. Lorem ipsum dolor sit amet,',
       title: 'Get the proper treatment you need anytime',
     },
     {
       svgPath: onboarding2,
-      desc: 'Receive consultation from the best doctors',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar consectetur amet. Lorem ipsum dolor sit amet,',
       title: 'Receive consultation from the best doctors',
     },
     {
       svgPath: onboarding3,
-      desc: 'Quick and reliable ambulance service',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar consectetur amet. Lorem ipsum dolor sit amet,',
       title: 'Quick and reliable ambulance service',
     },
   ];
@@ -48,12 +48,14 @@ const Onboarding = () => {
         bounces={false}
         renderItem={({item, index}) => (
           <View
+            key={`${item}-${index}`}
             style={[
               globalStyles.py2,
               {
-                width: width,
-                height: height * 0.7,
+                // width: width,
+                // height: height * 0.7,
                 // backgroundColor: 'red',
+                flex: 1,
               },
             ]}>
             <View
@@ -77,7 +79,7 @@ const Onboarding = () => {
                 ]}>
                 <Svg icon={item.svgPath} />
               </View>
-              {/* <View style={[globalStyles.px1]}>
+              <View style={[globalStyles.px1, {backgroundColor: 'red'}]}>
                 <TextComponent
                   style={{
                     fontFamily: 'Montserrat-SemiBold',
@@ -86,7 +88,7 @@ const Onboarding = () => {
                   }}>
                   {item.title}
                 </TextComponent>
-              </View> */}
+              </View>
             </View>
           </View>
         )}
