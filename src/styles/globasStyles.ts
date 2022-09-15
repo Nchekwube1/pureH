@@ -1,5 +1,5 @@
 import {Dimensions, StyleSheet} from 'react-native';
-import colors from '../constants/pallete';
+import pallete from '../constants/pallete';
 
 export const {height, width} = Dimensions.get('window');
 const globalStyles = StyleSheet.create({
@@ -39,14 +39,47 @@ const globalStyles = StyleSheet.create({
   py2: {
     paddingVertical: 20,
   },
+  mt1: {
+    marginTop: 10,
+  },
+  mt2: {
+    marginTop: 20,
+  },
+  mr1: {
+    marginRight: 10,
+  },
   fontNunitoRegular: {
     fontFamily: 'Nunito-Regular',
+  },
+  fontNunitoBold: {
+    fontFamily: 'Nunito-Bold',
   },
   textSizeNormal: {
     fontSize: 14,
   },
+  textSizelg: {
+    fontSize: 16,
+  },
+  textSizexl: {
+    fontSize: 18,
+  },
   textBlack: {
-    color: colors.black,
+    color: pallete.black,
+  },
+  textWhite: {
+    color: pallete.white,
+  },
+  flexRow: {
+    flexDirection: 'row',
+  },
+  absolute: {
+    position: 'absolute',
+  },
+  onBoardingIndicator: {
+    width: 12,
+    height: 12,
+    borderRadius: 50,
+    backgroundColor: pallete.lightGray,
   },
 });
 
