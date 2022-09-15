@@ -10,7 +10,7 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import React, {useEffect} from 'react';
-import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
 import MainNavigation from './src/navigation/MainNavigation';
 import {getStatusBarHeight} from 'react-native-iphone-x-helper';
