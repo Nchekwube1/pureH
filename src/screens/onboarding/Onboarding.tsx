@@ -1,5 +1,5 @@
 import {View, ScrollView} from 'react-native';
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 import globalStyles, {height, width} from '../../styles/globasStyles';
 import TextComponent from '../../components/text/TextComponent';
 import onboarding1 from '../../assets/svgs/onboarding1';
@@ -35,6 +35,7 @@ const Onboarding = () => {
       navigate('registerStack');
     }
   };
+  const [btnText, setBtnText] = useState('Next');
   const currentIndex = useDerivedValue(() => {
     return translationX.value;
   }, [translationX.value]);
@@ -55,18 +56,19 @@ const Onboarding = () => {
       title: 'Quick and reliable ambulance service',
     },
   ];
-  const scrollX = useSharedValue(0);
 
   const scrollHandler = useAnimatedScrollHandler({
     onScroll: event => {
       let offset = Math.round(event.contentOffset.x / width);
       translationX.value = offset;
+      if (offset === data.length - 1) {
+        setBtnText('Sign Up');
+      } else {
+        setBtnText('Next');
+      }
     },
   });
 
-  useEffect(() => {
-    console.log('scrollX===>', scrollX.value);
-  }, [scrollX]);
   return (
     <View
       style={[
@@ -173,9 +175,14 @@ const Onboarding = () => {
             );
           })}
         </View>
-        <View style={[globalStyles.px2, globalStyles.mt2]}>
-          <ButtonComponent title="Next" onPress={onClick} />
-        </View>
+        <Animated.View style={[globalStyles.px2, globalStyles.mt2]}>
+          <ButtonComponent
+            // title={translationX.value === data.length - 1 ? 'Sign Up' : 'Next'}
+            title={btnText}
+            // title={translationX.value.toString()}
+            onPress={onClick}
+          />
+        </Animated.View>
       </View>
     </View>
   );
