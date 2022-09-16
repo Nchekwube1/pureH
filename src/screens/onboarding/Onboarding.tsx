@@ -15,6 +15,8 @@ import Animated, {
 import pallete from '../../constants/pallete';
 import ButtonComponent from '../../components/button/ButtonComponent';
 import Dot from './Dot';
+import {useNavigation} from '@react-navigation/native';
+import {AuthStackNavigationProps} from '../../types/types';
 const Onboarding = () => {
   interface dataProps {
     svgPath: string;
@@ -22,6 +24,7 @@ const Onboarding = () => {
     desc: string;
   }
   const flatListRef = useAnimatedRef<ScrollView>();
+  const {navigate} = useNavigation<AuthStackNavigationProps>();
   const translationX = useSharedValue(0);
   const onClick = () => {
     if (translationX.value !== data.length - 1) {
@@ -29,6 +32,7 @@ const Onboarding = () => {
         x: width * (translationX.value + 1),
       });
     } else {
+      navigate('registerStack');
     }
   };
   const currentIndex = useDerivedValue(() => {
