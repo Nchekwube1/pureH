@@ -1,4 +1,4 @@
-import {View, FlatList, ScrollView} from 'react-native';
+import {View, ScrollView} from 'react-native';
 import React, {useEffect} from 'react';
 import globalStyles, {height, width} from '../../styles/globasStyles';
 import TextComponent from '../../components/text/TextComponent';
@@ -9,7 +9,6 @@ import Svg from '../../components/Svg';
 import Animated, {
   useAnimatedRef,
   useAnimatedScrollHandler,
-  useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
 } from 'react-native-reanimated';
