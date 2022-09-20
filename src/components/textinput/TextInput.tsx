@@ -17,6 +17,7 @@ const TextInputComponent: FC<textInputProps> = ({
   error,
   errorText,
   editable,
+  label,
 }) => {
   const [focus, setFocus] = useState(false);
 
@@ -41,6 +42,9 @@ const TextInputComponent: FC<textInputProps> = ({
         globalStyles.w10,
         globalStyles.flexColumn,
       ]}>
+      {label && (
+        <TextComponent style={[globalStyles.mb1]}>{label}</TextComponent>
+      )}
       <TextInput
         value={value}
         onChangeText={onChangeText}
