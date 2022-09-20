@@ -230,6 +230,15 @@ const globalStyles = ScaledSheet.create({
   textInputHeight: {
     height: '45@s',
   },
+  colGray: {
+    color: pallete.textGray,
+  },
+  colGren: {
+    color: pallete.lightGreen,
+  },
+  textCenter: {
+    textAlign: 'center',
+  },
 });
 
 export default globalStyles;
