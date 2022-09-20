@@ -29,6 +29,7 @@ export type RegisterStackNavigationProps = NativeStackNavigationProp<
 export interface textInputProps {
   value: any;
   onChangeText: (text: string) => void;
+  label?: string;
   style?: StyleProp<TextStyle>;
   onFocus?: () => void;
   onBlur?: () => void;
