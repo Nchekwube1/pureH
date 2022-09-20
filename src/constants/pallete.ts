@@ -7,6 +7,7 @@ const pallete = {
   bgTextInput: '#ccc',
   gray: ' #ccc',
   lightGreen: '#5BD6A6',
+  textGray: ' #808080',
 };
 
 export default pallete;
