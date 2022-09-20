@@ -32,7 +32,7 @@ export default ButtonComponent;
 const buttonStyles = StyleSheet.create({
   button: {
     width: '100%',
-    height: 46,
+    height: 50,
     borderRadius: 10,
     backgroundColor: pallete.primary,
     justifyContent: 'center',
