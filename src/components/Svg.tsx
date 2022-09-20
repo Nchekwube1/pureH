@@ -5,16 +5,17 @@ export type SvgProps = {
   icon: any;
   color?: any;
   fill?: any;
+  width?: any;
 };
 
-const Svg: React.FC<SvgProps> = ({icon, color, fill}) => {
+const Svg: React.FC<SvgProps> = ({icon, color, fill, width}) => {
   const SvgImage = () => (
     <SvgXml
       xml={icon}
       stroke={color ? color : undefined}
       color={'#292D32'}
       fill={fill}
-      width="100%"
+      width={width ?? '100%'}
     />
   );
   return <SvgImage />;
